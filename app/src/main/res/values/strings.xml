@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Reclam</string>
+    <string name="app_names">No Internet Connection found.</string>
+    <string name="password_hint"><font size="25">What is your password?</font></string>
+    <string name="user_hint"><font size="25">What is your username?</font></string>
 </resources>
