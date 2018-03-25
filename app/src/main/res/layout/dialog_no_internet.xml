@@ -15,7 +15,6 @@
             android:layout_height="wrap_content">
 
             <ImageView
-
                 android:id="@+id/ig_no_internet"
                 android:layout_width="100dp"
                 android:layout_height="100dp"

@@ -5,21 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+<Button
+    android:text="click"
+    android:id="@+id/tvShowPost"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_session"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:passwordToggleContentDescription="string/description"
-
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/colorAccent">
-
-        <android.support.design.widget.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_person_white_24dp"
-            android:hint="string/password"
-            android:textColorHint="#000"
-            android:inputType="textPassword"/>
-    </android.support.design.widget.TextInputLayout>
 </LinearLayout>
