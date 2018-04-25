@@ -6,3 +6,4 @@ package ia2.moduleproject.eniso.reclam.Constant
 val ENISO_URL = "http://eniso.info/ws/login/toto?password=toto1243"
 var MyREPONSE = "MyREPONSE"
 var MyUserLoginAndPassword = "MyUserLoginAndPassword "
+val sessionIdHeader = "X-JSESSIONID"

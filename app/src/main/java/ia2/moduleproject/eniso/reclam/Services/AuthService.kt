@@ -19,7 +19,7 @@ class AuthService {
 
     constructor(context: Context) {
         this.context = context;
-        this.enisoInfoDAO = EnisoInfoDAO(context);
+        this.enisoInfoDAO = EnisoInfoDAO(context)
     }
     lateinit var progressDialog: ProgressDialog
 
@@ -37,12 +37,28 @@ class AuthService {
         enisoInfoDAO.login(user, password, listener)
     }
 
+    fun saveLoginUser(user:String , pass : String , sessionId: String) {
+        val infofile = context.getSharedPreferences(MyUserLoginAndPassword, Context.MODE_PRIVATE)
+        val editor = infofile.edit()
+        editor.putString("username", user!!)
+        editor.putString("pass", pass!!)
+        editor.putString("sessionId", sessionId)
+        editor.apply()
+
+    }
+
     fun getUserInfo(): UserInfo {
 
         val infofile = context.getSharedPreferences(MyUserLoginAndPassword, Context.MODE_PRIVATE)
         val name = infofile.getString("username", "")
         val passwword = infofile.getString("pass", "")
         return UserInfo(name, passwword)
+    }
+
+    fun getSessionId ():String {
+        val infofile = context.getSharedPreferences(MyUserLoginAndPassword, Context.MODE_PRIVATE)
+        val sessionId = infofile.getString("sessionId", "")
+        return sessionId
     }
 
     fun postTest(sessionId: String, listener : Callback <Array<NavigablePeriods>?>){
