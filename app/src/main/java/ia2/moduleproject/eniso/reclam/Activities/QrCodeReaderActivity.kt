@@ -35,6 +35,12 @@ class QrCodeReaderActivity : AppCompatActivity() {
             } else {
                 tvShow!!.text = result.contents
                 Toast.makeText(this, result.contents, Toast.LENGTH_LONG).show()
+                Intent(this, test::class.java).apply {
+                    // setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    //addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    //intent.putExtra("result",result.contents)
+                    startActivity(this)
+                }
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data)

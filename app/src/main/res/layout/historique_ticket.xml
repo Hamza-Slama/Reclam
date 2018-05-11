@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#a3a0a0"
+    app:cardCornerRadius="13dp"
+    android:layout_marginBottom="3dp"
+    android:elevation="13dp">
+    <RelativeLayout
+        android:background="@drawable/gradient_background"
+        android:id="@+id/holeThing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true">
+
+
+        <!--Name ticket-->
+        <RelativeLayout
+            android:id="@+id/rl_tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_name_ticket"
+                android:text="Souris "
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tv_date_ticket"
+                android:text="20-10-2018 "
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <!--Comment ticket-->
+    <RelativeLayout
+        android:id="@+id/rl_Note"
+        android:layout_below="@+id/rl_tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_comment_ticket"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+        <!--Etat ticket-->
+        <RelativeLayout
+
+            android:id="@+id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_Note"
+           android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_text"
+                android:backgroundTint="@color/A"
+                android:alpha="1.5"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:id="@+id/labelA"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/rounded_text"
+                    android:backgroundTint="@color/index_text_color"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="O"
+                    android:textColor="@color/A"
+                    android:textSize="20sp"
+                    tools:targetApi="lollipop" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/column_diff"
+                android:layout_toEndOf="@id/A"
+                android:background="@drawable/rounded_text"
+                android:backgroundTint="@color/B"
+                android:alpha="0.1"
+                tools:targetApi="lollipop"
+                android:layout_marginLeft="@dimen/column_diff"
+                android:layout_toRightOf="@id/A">
+
+                <TextView
+                    android:id="@+id/labelB"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/rounded_text"
+                    android:backgroundTint="@color/index_text_color"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="A"
+                    android:textColor="@color/B"
+                    android:textSize="20sp"
+                    tools:targetApi="lollipop" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:background="@drawable/rounded_text"
+                android:backgroundTint="@color/C"
+                android:layout_marginStart="@dimen/column_diff"
+                android:layout_toEndOf="@id/B"
+                android:id="@+id/C"
+                android:alpha="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/column_diff"
+                android:layout_toRightOf="@id/B">
+
+                <TextView
+                    android:id="@+id/labelCs"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/rounded_text"
+                    android:backgroundTint="@color/index_text_color"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="I"
+                    android:textColor="@color/C"
+                    android:textSize="20sp"
+                    tools:targetApi="lollipop" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/column_diff"
+                android:layout_toEndOf="@id/C"
+                android:alpha="0.2"
+                android:background="@drawable/rounded_text"
+                android:backgroundTint="@color/D"
+                tools:targetApi="lollipop"
+                android:layout_marginLeft="@dimen/column_diff"
+                android:layout_toRightOf="@id/C">
+
+                <TextView
+                    android:id="@+id/labelDs"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/rounded_text"
+                    android:backgroundTint="@color/index_text_color"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:text="V"
+                    android:textColor="@color/D"
+                    android:textSize="20sp"
+                    tools:targetApi="lollipop" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+</RelativeLayout>
+</android.support.v7.widget.CardView>

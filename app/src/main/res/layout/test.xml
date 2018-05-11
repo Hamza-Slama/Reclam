@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="30dp"
+        android:layout_margin="30dp"
+        android:text="Souris"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_name_scanned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:layout_margin="20dp"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/tv_name_scanned"
+        android:layout_width="344dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="169dp" />
+<TextView
+    android:layout_below="@+id/spinner"
+    android:id="@+id/result"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_comment"
+        android:layout_below="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <Button
+        android:text="Send"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/et_comment"
+        android:id="@+id/btn_send_reclamation"
+        android:layout_width="match_parent"
+        android:background="@drawable/background_login"
+        android:clickable="true"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+
+
+ -->
+</RelativeLayout>

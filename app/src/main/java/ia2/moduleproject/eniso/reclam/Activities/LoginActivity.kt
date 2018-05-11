@@ -12,12 +12,12 @@ import  android.widget.*
 import ia2.moduleproject.eniso.reclam.Constant.sessionIdHeader
 import ia2.moduleproject.eniso.reclam.Dialogs.AlertDialogShowReponse
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     var urlLogin = ""
     var authService = AuthService(this)
     var currentUser: UserInformationSerialized? = null
-    var self: MainActivity = this
+    var self: LoginActivity = this
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +47,9 @@ class MainActivity : AppCompatActivity() {
                 override fun onSuccess(result: UserInformationSerialized?) {
                     currentUser = result
                     Toast.makeText(self, currentUser.toString(), Toast.LENGTH_LONG).show()
+                    val intent = Intent(self, historique::class.java)
+                    intent.putExtra(sessionIdHeader, currentUser!!.sessionId.toString())
+                    startActivity(intent)
                 }
 
                 override fun onError(errorMessage: String) {
@@ -60,9 +63,7 @@ class MainActivity : AppCompatActivity() {
                     loadLoginUser()
                 }
 
-                val intent = Intent(this, ReaderQrCodeActivity::class.java)
-                intent.putExtra(sessionIdHeader, currentUser!!.sessionId.toString())
-                startActivity(intent)
+
 
             }
 //            RememberMe()
